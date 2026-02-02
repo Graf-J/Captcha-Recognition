@@ -1,6 +1,7 @@
-def main():
-    print("Hello from captcha-recognition!")
+from src.captchadataset import CaptchaDataset
 
-
-if __name__ == "__main__":
-    main()
+dataset = CaptchaDataset(
+    r"C:\Users\Johannes\.cache\kagglehub\datasets\parsasam\captcha-dataset\versions\1"
+)
+print(len(dataset))
+print(dataset[0])
