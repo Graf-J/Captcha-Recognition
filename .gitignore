@@ -10,4 +10,7 @@ wheels/
 .venv
 
 # Saved Models
-*/*.pth
+*/**/*.pth
+
+# Environment File
+.env
