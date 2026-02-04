@@ -14,3 +14,7 @@ wheels/
 
 # Environment File
 .env
+
+data
+
+*/**/*.txt

@@ -6,7 +6,7 @@ from PIL.Image import Image as ImageType
 from pathlib import Path
 from tqdm import tqdm
 
-class CachableCaptchaDataset(Dataset):
+class KaggleDataset(Dataset):
     def __init__(self, root_dir: str, transform=None, preload: bool = True) -> None:
         self.root_dir = Path(root_dir)
         self.transform = transform
@@ -36,6 +36,19 @@ class CachableCaptchaDataset(Dataset):
                     self.char_to_idx[char] for char in label_str if char in self.char_to_idx
                 ]
                 self.cached_labels.append(torch.tensor(label_encoded, dtype=torch.long))
+
+    @property
+    def labels(self) -> list[torch.Tensor]:
+        if self.preload:
+            return self.cached_labels
+        else:
+            return [
+                torch.tensor(
+                    [self.char_to_idx[c] for c in p.stem if c in self.char_to_idx],
+                    dtype=torch.long,
+                )
+                for p in self.image_paths
+            ]
 
     def __len__(self) -> int:
         return len(self.image_paths)

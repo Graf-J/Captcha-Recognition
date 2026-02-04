@@ -4,7 +4,7 @@ import torch.nn as nn
 
 
 class Captcha_CRNN_V1(nn.Module):
-    SAVE_DIR = Path(os.environ["PROJECT_ROOT_DIR"]) / "weights" / "crnn" / "v1.pth"
+    SAVE_DIR = Path(os.environ["PROJECT_ROOT_DIR"]) / "weights" / "crnn"
 
     def __init__(self, num_chars):
         super(Captcha_CRNN_V1, self).__init__()
@@ -33,7 +33,7 @@ class Captcha_CRNN_V1(nn.Module):
             nn.SiLU()
         )
 
-        # New Input Size: Channels (128) * Height (6) = 768
+        # New Input Size: Channels (256) * Height (5) = 1280
         self.lstm = nn.LSTM(
             input_size=1280, 
             hidden_size=256,
