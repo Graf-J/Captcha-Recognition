@@ -1,0 +1,26 @@
+{
+  "architectures": [
+    "CaptchaConvolutionalTransformer"
+  ],
+  "d_model": 1280,
+  "dim_feedforward": 2048,
+  "dropout": 0.1,
+  "dtype": "float32",
+  "model_type": "captcha_convolutional_transformer",
+  "nhead": 8,
+  "num_chars": 63,
+  "num_layers": 1,
+  "transformers_version": "5.1.0",
+  "auto_map": {
+    "AutoConfig": "configuration_captcha.CaptchaConfig",
+    "AutoModel": "modeling_captcha.CaptchaConvolutionalTransformer",
+    "AutoProcessor": "processing_captcha.CaptchaProcessor"
+  },
+  "custom_pipelines": {
+    "captcha-recognition": {
+      "impl": "pipeline.CaptchaPipeline",
+      "pt": ["AutoModel"],
+      "type": "multimodal"
+    }
+  }
+}

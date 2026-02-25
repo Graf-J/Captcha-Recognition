@@ -20,3 +20,9 @@ data
 */**/*.txt
 
 */**/*.pb
+
+*/**/*.csv
+
+wandb
+
+*/**/*.safetensors
