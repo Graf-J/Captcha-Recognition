@@ -17,9 +17,14 @@ library_name: transformers
 # ✨ DeepCaptcha-CRNN: Sequential Vision for OCR
 ### CRNN Base
 
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/release/python-3130/)
 [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange)](https://huggingface.co/Graf-J/captcha-crnn-finetuned)
+
+🚀 **Live Demo:**  
+👉 [Try the Model in Your Browser](https://huggingface.co/spaces/Graf-J/Captcha-Demo)
 
 ---
 
