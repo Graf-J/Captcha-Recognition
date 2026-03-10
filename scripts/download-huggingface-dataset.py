@@ -1,10 +1,10 @@
 import os
 import re
 from pathlib import Path
-from dotenv import load_dotenv
+from dotenv import find_dotenv, load_dotenv
 from datasets import load_dataset
 from tqdm import tqdm
-load_dotenv()
+load_dotenv(find_dotenv(), override=True)
 
 ds = load_dataset("hammer888/captcha-data")
 # output_dir = "./data/hammer_captchas"
