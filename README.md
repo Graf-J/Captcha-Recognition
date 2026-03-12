@@ -189,8 +189,6 @@ Run `notebooks/autoencoder/autoencoder_v1.ipynb`.
 
 Run `notebooks/autoencoder/autoencoder_model_evaluation.ipynb`.
 
-Evaluates each of the four Isolation Forest models separately against three test sets:
-
 | Test Set | Type | ROC-AUC | FPR@95TPR
 |----------|------|---------|----------
 | CIFAR-10 | Easy negatives | 0.9711 | 0.0890
