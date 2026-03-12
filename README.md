@@ -233,6 +233,9 @@ Captcha-Recognition/
 │   ├── isolation-forest/
 │   │   ├── isolation_forest_v1.ipynb
 │   │   └── isolation_forest_evaluation.ipynb
+│   ├── autoencoder/
+│   │   ├── autoencoder_v1.ipynb
+│   │   └── autoencoder_model_evaluation.ipynb
 │   ├── model-analysis/           # 01–07 evaluation notebooks
 │   ├── data-analysis/
 │   ├── data-cleaning/
