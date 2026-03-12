@@ -170,6 +170,34 @@ Metrics reported per dataset: ROC-AUC, FPR at 95% TPR.
 
 ---
 
+## Autoencoder (CAPTCHA Anomaly Detector)
+
+A autoencoder using Binary Crossentropy Loss is trained on the CAPTCHA images. It is then used to measure the reconstruction error and detect images which do not represent real CAPTCHAs.
+
+### Step 1 — Download Evaluation Datasets
+
+```bash
+uv run scripts/download-coco-dataset.py      # CIFAR-10 easy negatives  → data/cifar10/
+uv run scripts/download-iiit5k-dataset.py    # SVHN hard negatives       → data/svhn/
+```
+
+### Step 2 — Train Autoencoder
+
+Run `notebooks/autoencoder/autoencoder_v1.ipynb`.
+
+### Step 3 — Evaluate
+
+Run `notebooks/autoencoder/autoencoder_model_evaluation.ipynb`.
+
+Evaluates each of the four Isolation Forest models separately against three test sets:
+
+| Test Set | Type | ROC-AUC | FPR@95TPR
+|----------|------|---------|----------
+| CIFAR-10 | Easy negatives | 0.9711 | 0.0890
+| SVHN | Hard negatives | 0.9711 | 0.1020
+
+---
+
 ## Project Structure
 
 ```
